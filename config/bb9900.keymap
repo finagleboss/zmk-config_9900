@@ -1,3 +1,7 @@
+/*
+ * SPDX-License-Identifier: MIT
+ */
+   
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -5,6 +9,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/ext_power.h>
+
 
 #define SYM 1
 #define UPPER 2
@@ -24,6 +29,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+
             bindings = <
                  &mkp LCLK                                                                                          &mkp RCLK
     &kp CLCK                &kp LGUI                            &mkp LCLK                          &mt ESC K_BACK                    &kp TAB
@@ -34,7 +40,9 @@
             >;
         };
 
+
         sym_layer {
+
             bindings = <        
                  &kp C_VOL_UP                                                                                       &kp C_VOL_DN
     &kp PSCRN               &kp C_AC_SEARCH                     &mkp LCLK                          &kp F5                            &kp F12 
@@ -46,17 +54,19 @@
         };
 
         upper_layer {
+
             bindings = <
                  &msc SCRL_UP                                                                                       &msc SCRL_DOWN
     &bt BT_SEL 0            &bt BT_SEL 1                             &td0                           &bt BT_SEL 2                     &bt BT_SEL 3
     &none        &kp UP     &none       &sys_reset &ext_power EP_TOG &none         &kp LT           &kp GT          &kp PIPE         &kp KP_EQUAL
     &kp LEFT     &kp DOWN   &kp RIGHT   &none      &tog GAMEPAD      &kp AMPS      &kp LBRC         &kp RBRC        &kp CARET        &kp BSPC
     &kp LSHFT    &none      &none       &none      &bl BL_DEC        &bl BL_TOG    &bl BL_INC       &none           &bootloader      &kp ENTER
-    &kp LCTRL               &kp LALT                            &kp SPACE                          &tog SYM                          &tog UPPER
+    &kp LCTRL               &kp LALT                                 &kp SPACE                          &tog SYM                         &tog UPPER
             >;
         };
 
         gamepad_layer {
+
             bindings = <
                  &kp F25                                                                                            &kp F26
     &none                   &none                               &mkp LCLK                          &none                             &none
